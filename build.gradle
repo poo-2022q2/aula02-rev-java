@@ -44,12 +44,15 @@ test {
 
 checkstyle {
     toolVersion = "8.42"
+    ignoreFailures = false
+    maxWarnings = 0
     config = resources.text.fromFile("config/checkstyle/checkstyle_poo.xml")
 }
 
 pmd {
     toolVersion = "6.34.0"
     consoleOutput = true
+    ignoreFailures = false
     ruleSets = []
     ruleSetFiles = files("config/pmd_poo.xml")
 }
